@@ -1,0 +1,7 @@
+- hosts: all
+  tasks:
+     - name: Testing script for Infra health check 
+       script: /home/ansibleuser/automation/infra-reports/pc.sh 
+       register: report
+
+     - debug: var=report.stdout_lines    
